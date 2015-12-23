@@ -1,0 +1,19 @@
+<% provide :title, "Log in" %>
+<h1>Log in</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag controller: "sessions", action: "create" do %>
+
+      <%= label_tag :email %>
+      <%= text_field_tag :email, nil, class: "form-control" %>
+
+      <%= label_tag :password %>
+      <%= text_field_tag :password, nil, class: "form-control" %>
+
+      <%= submit_tag "Log in", class: "btn btn-primary" %>
+    <% end %>
+
+    <p>If you don't yet have a password, please <%= link_to "sign up now!" %></p>
+  </div>
+</div>
