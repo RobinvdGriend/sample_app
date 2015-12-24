@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email].downcase)
     if user && user.authenticate(params[:password])
       # Log in user and redirect to user's show page
-      login(user)
+      log_in(user)
       redirect_to user_path(user)
     else
       # Rerender login form with error message
