@@ -16,5 +16,13 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    if logged_in?
+      log_out
+      flash[:notice] = "You're logged out. Thank you for visiting"
+      redirect_to root_path
+    else
+      flash[:dange] = "Can't log out if you're not logged in"
+      redirect_to root_path
+    end
   end
 end
