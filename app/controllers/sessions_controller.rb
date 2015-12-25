@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "You're logged out. Thank you for visiting"
       redirect_to root_path
     else
-      flash[:dange] = "Can't log out if you're not logged in"
+      flash[:danger] = "You are already logged out!"
       redirect_to root_path
     end
   end
