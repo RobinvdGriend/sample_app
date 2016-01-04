@@ -5,10 +5,15 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.4'
 # User bcrypt for secure password hashing
 gem 'bcrypt', '3.1.7'
+# Use faker to generate sample users
+gem 'faker', '1.4.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'will_paginate', '3.0.7'
 # Use Bootstrap as CSS framework
 gem 'bootstrap-sass', '~> 3.2'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
