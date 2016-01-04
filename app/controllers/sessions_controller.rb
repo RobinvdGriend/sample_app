@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       # Log in user and redirect to user's show page
       log_in(user)
       params[:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user_path(user)
+      redirect_back_or(user_path(user))
     else
       # Rerender login form with error message
       flash.now[:danger] = "Invalid login credentials"
