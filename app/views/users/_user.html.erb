@@ -1,4 +1,7 @@
 <li>
   <img src="http://placehold.it/50" class="avatar"> <%# Placeholder image %>
   <%= link_to user.name, user %>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", user_path(user), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
 </li>
